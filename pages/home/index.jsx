@@ -1,5 +1,13 @@
-import React from "react";
+import Campaigns from "@/components/Campaigns";
+import Carousel from "@/components/Carousel";
+import MenuWrapper from "@/components/product/MenuWrapper";
 
 export default function Home() {
-  return <div className=""></div>;
+  return (
+    <div>
+      <Carousel />
+      <Campaigns />
+      <MenuWrapper />
+    </div>
+  );
 }
