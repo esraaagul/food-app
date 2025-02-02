@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Campaigns from "@/components/Campaigns";
 import Carousel from "@/components/Carousel";
 import MenuWrapper from "@/components/product/MenuWrapper";
+import Reservation from "@/components/Reservation";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Campaigns />
       <MenuWrapper />
       <About />
+      <Reservation/>
     </div>
   );
 }
