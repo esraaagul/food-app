@@ -1,34 +1,33 @@
-import Input from "@/components/form/Input";
-import Title from "@/components/ui/Title";
-import Link from "next/link";
 import { useFormik } from "formik";
-import { loginSchema } from "@/schema/login";
+import Link from "next/link";
+import Input from "../../components/form/Input";
+import Title from "../../components/ui/Title";
+import { adminSchema } from "../../schema/admin";
 
-const Login = () => {
+const Index = () => {
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 4000));
     actions.resetForm();
   };
-
   const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
     useFormik({
       initialValues: {
-        email: "",
+        username: "",
         password: "",
       },
       onSubmit,
-      validationSchema: loginSchema,
+      validationSchema: adminSchema,
     });
 
   const inputs = [
     {
       id: 1,
-      name: "email",
-      type: "email",
-      placeholder: "Your Email Address",
-      value: values.email,
-      errorMessage: errors.email,
-      touched: touched.email,
+      name: "username",
+      type: "text",
+      placeholder: "Your Username",
+      value: values.username,
+      errorMessage: errors.username,
+      touched: touched.username,
     },
     {
       id: 2,
@@ -42,12 +41,12 @@ const Login = () => {
   ];
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto py-3">
       <form
-        className="flex flex-col mx-auto items-center md:w-1/2 w-full my-20"
+        className="flex flex-col items-center my-20 md:w-1/2 w-full mx-auto"
         onSubmit={handleSubmit}
       >
-        <Title addClass="text-4xl mb-6">Login</Title>
+        <Title addClass="text-[40px] mb-6">Admin Login</Title>
         <div className="flex flex-col gap-y-3 w-full">
           {inputs.map((input) => (
             <Input
@@ -60,12 +59,9 @@ const Login = () => {
         </div>
         <div className="flex flex-col w-full gap-y-3 mt-6">
           <button className="btn-primary">LOGIN</button>
-          <button className="btn-primary !bg-secondary">
-            <i className="fa fa-google  mr-2 text-lg"></i> GOOGLE
-          </button>
-          <Link href="/auth/register">
+          <Link href="/">
             <span className="text-sm underline cursor-pointer text-secondary">
-              Do you no have a account?
+              Home Page
             </span>
           </Link>
         </div>
@@ -74,4 +70,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Index;
