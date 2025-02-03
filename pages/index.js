@@ -1,10 +1,10 @@
-import Header from "@/components/layout/header";
+import Header from "@/components/layout/Header";
 import Home from "./home";
+import Footer from "@/components/layout/Footer";
 
 export default function Index() {
   return (
     <div className="">
-      <Header />
       <Home />
     </div>
   );

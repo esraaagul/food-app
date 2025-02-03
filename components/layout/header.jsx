@@ -4,6 +4,7 @@ import { FaUserAlt, FaShoppingCart, FaSearch } from "react-icons/fa";
 import { Search } from "../ui/Search";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
@@ -32,28 +33,34 @@ const Header = () => {
           )}
           <ul className="flex gap-x-2 sm:flex-row flex-col items-center justify-end">
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">HOME</a>
+              <Link href="/">HOME</Link>
             </li>
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">MENU</a>
+              <Link href="/menu">MENU</Link>
             </li>
             <li className="px-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">ABOUT</a>
+              <Link href="/about">ABOUT</Link>
             </li>
             <li className="ppx-[0.313rem] py-[0.625rem] hover:text-primary cursor-pointer">
-              <a href="">BOOK TABLE</a>
+              <Link href="/reservation">BOOK TABLE</Link>
             </li>
           </ul>
         </nav>
         <div className="flex gap-x-4 items-center">
-          <a href="#" className="hover:text-primary transition-all">
+          <Link
+            href="/auth/login"
+            className="hover:text-primary transition-all cursor-pointer"
+          >
             <FaUserAlt />
-          </a>
-          <a href="#" className="hover:text-primary transition-all">
+          </Link>
+          <a
+            href="#"
+            className="hover:text-primary transition-all cursor-pointer"
+          >
             <FaShoppingCart />
           </a>
           <button onClick={() => setIsSearchModal(true)}>
-            <FaSearch className="hover:text-primary transition-all" />
+            <FaSearch className="hover:text-primary transition-all cursor-pointer" />
           </button>
           <a className="md:inline-block hidden sm" href="#">
             <button className="btn-primary">Order Online</button>

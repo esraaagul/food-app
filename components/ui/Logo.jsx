@@ -1,7 +1,12 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 export const Logo = () => {
   return (
-    <div className=" font-dancing font-bold text-[2rem]">Feane</div>
+    <Link href="/">
+      <span className="text-[2rem] font-dancing font-bold cursor-pointer">
+        Feane
+      </span>
+    </Link>
   );
-}
+};
