@@ -7,8 +7,14 @@ const MenuItem = () => {
     <div className="bg-secondary rounded-3xl">
       <div className="w-full  bg-[#f1f2f3] h-[210px] grid place-content-center rounded-bl-[46px] rounded-tl-2xl rounded-tr-2xl">
         <Link href="/product">
-          <div className="relative w-40 h-40  hover:scale-110 transition-all">
-            <Image src="/images/food.png" fill alt="food"></Image>
+          <div className="relative w-40 h-40 hover:scale-110 transition-all overflow-hidden">
+            <Image
+              src="/images/food.png"
+              alt="food"
+              fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 200px"
+              className="object-cover"
+            />
           </div>
         </Link>
       </div>

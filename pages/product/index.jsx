@@ -80,9 +80,10 @@ const Index = () => {
       <div className="relative md:flex-1 md:w-[80%] md:h-[80%] w-36 h-36 mx-auto">
         <Image
           src="/images/food.png"
-          alt=""
-          layout="fill"
-          objectFit="contain"
+          alt="Pizza Food"
+          fill
+          sizes="(max-width: 768px) 36px, (max-width: 1200px) 80%, 80%"
+          className="object-contain"
         />
       </div>
       <div className="md:flex-1 md:text-start text-center">
@@ -102,7 +103,7 @@ const Index = () => {
               className="relative w-8 h-8 cursor-pointer"
               onClick={() => handleSize(0)}
             >
-              <Image src="/images/size.png" alt="" layout="fill" />
+              <Image src="/images/size.png" alt="" fill sizes="32px" />
               <span className="absolute top-0 -right-6 text-xs bg-primary rounded-full px-[5px] font-medium">
                 Small
               </span>
@@ -111,7 +112,7 @@ const Index = () => {
               className="relative w-12 h-12 cursor-pointer"
               onClick={() => handleSize(1)}
             >
-              <Image src="/images/size.png" alt="" layout="fill" />
+              <Image src="/images/size.png" alt="" fill sizes="48px" />
               <span className="absolute top-0 -right-6 text-xs bg-primary rounded-full px-[5px] font-medium">
                 Medium
               </span>
@@ -120,7 +121,7 @@ const Index = () => {
               className="relative w-16 h-16 cursor-pointer"
               onClick={() => handleSize(2)}
             >
-              <Image src="/images/size.png" alt="" layout="fill" />
+              <Image src="/images/size.png" alt="" fill sizes="64" />
               <span className="absolute top-0 -right-6 text-xs bg-primary rounded-full px-[5px] font-medium">
                 Large
               </span>

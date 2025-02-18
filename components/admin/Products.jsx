@@ -28,8 +28,14 @@ const Products = () => {
           </thead>
           <tbody>
             <tr className="transition-all bg-secondary border-gray-700 hover:bg-primary ">
-              <td className="py-4 px-6 font-medium whitespace-nowrap hover:text-white flex items-center gap-x-1 justify-center">
-                <Image src="/images/food.png" alt="" width={50} height={50} />
+              <td className="py-4 px-6 font-medium whitespace-nowrap text-center group">
+                <Image
+                  src=""
+                  alt="Yemek Resmi"
+                  width={50}
+                  height={50}
+                  className="transition-transform duration-200 ease-in-out group-hover:scale-110"
+                />
               </td>
               <td className="py-4 px-6 font-medium whitespace-nowrap hover:text-white">
                 63049e92...
